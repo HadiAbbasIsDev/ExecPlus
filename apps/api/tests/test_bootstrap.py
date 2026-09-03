@@ -40,4 +40,3 @@ def test_hosted_model_route_uses_compatible_adapter() -> None:
     model = build_language_model(settings)
 
     assert isinstance(model, OpenAICompatibleLanguageModel)
-

@@ -44,6 +44,9 @@ src = ["apps/api/src", "apps/api/tests", "tests"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
+[tool.ruff.lint.isort]
+known-first-party = ["execplus"]
+
 [tool.mypy]
 python_version = "3.10"
 strict = true
