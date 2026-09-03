@@ -33,6 +33,6 @@ class AnswerAssembler:
             raise UnverifiedAnswerError(
                 "The requested metric is absent from executed results"
             ) from error
-        if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)):
+        if isinstance(value, bool) or not isinstance(value, int | float | Decimal):
             raise UnverifiedAnswerError("The executed metric is not numeric")
         return VerifiedMetricAnswer(label=label, value=value, lineage=lineage)
