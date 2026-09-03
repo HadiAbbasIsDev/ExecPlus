@@ -50,5 +50,5 @@ known-first-party = ["execplus"]
 [tool.mypy]
 python_version = "3.10"
 strict = true
-packages = ["execplus"]
+files = ["apps/api/src"]
 mypy_path = "apps/api/src"
