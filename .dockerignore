@@ -1,0 +1,24 @@
+# Use case: Keeps local artifacts, secrets, datasets, and caches out of container build contexts.
+# What it does: Reduces build size and prevents accidental inclusion of sensitive development files.
+
+.git
+.github
+.env
+.env.*
+!.env.example
+.venv
+__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+node_modules
+.next
+coverage
+htmlcov
+data
+uploads
+exports
+models
+*.duckdb
+*.db
+

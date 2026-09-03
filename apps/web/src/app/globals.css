@@ -1,0 +1,340 @@
+/* Use case: Defines the visual system for the initial ExecPlus web shell.
+What it does: Creates a responsive, accessible layout with a restrained analytics-product identity. */
+
+:root {
+  --ink: #17211b;
+  --muted: #59635d;
+  --paper: #f4f1e8;
+  --surface: #fcfaf4;
+  --line: #d4d7cc;
+  --green: #174c38;
+  --lime: #c7f36b;
+  --orange: #e97842;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(199, 243, 107, 0.32), transparent 27rem),
+    var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+nav {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(23, 33, 27, 0.18);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brandMark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: var(--paper);
+  background: var(--green);
+  border-radius: 10px;
+}
+
+.phaseBadge {
+  padding: 9px 13px;
+  color: var(--green);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(23, 76, 56, 0.24);
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 850px;
+  margin: 24px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.6rem, 8vw, 7.2rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.heroCopy {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.primaryAction {
+  padding: 15px 20px;
+  color: white;
+  background: var(--green);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.primaryAction:hover {
+  background: #0d3627;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.principles article {
+  min-height: 170px;
+  padding: 26px 24px;
+  border-right: 1px solid var(--line);
+}
+
+.principles article:last-child {
+  border-right: 0;
+}
+
+.principles span,
+.flow span {
+  color: var(--orange);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.principles h2 {
+  max-width: 180px;
+  margin-top: 48px;
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.architecture {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  padding: 140px 0;
+}
+
+.architecture h2,
+.next h2 {
+  margin: 16px 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.architecture p {
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.flow {
+  padding: 12px 24px;
+  color: white;
+  background: var(--green);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(23, 76, 56, 0.18);
+}
+
+.flow div {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 90px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.flow div:last-child {
+  border-bottom: 0;
+}
+
+.flow small {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 100px;
+  padding: 70px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.next ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: next-item;
+}
+
+.next li {
+  counter-increment: next-item;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.next li::before {
+  content: "0" counter(next-item);
+  margin-right: 22px;
+  color: var(--orange);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  main {
+    width: min(100% - 28px, 620px);
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 64px 0;
+  }
+
+  .heroActions,
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .principles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .principles article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .principles article:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .architecture,
+  .next {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .architecture {
+    padding: 90px 0;
+  }
+
+  .next {
+    padding: 38px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phaseBadge {
+    font-size: 0.66rem;
+  }
+
+  h1 {
+    font-size: 3.3rem;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .principles article {
+    min-height: 130px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .principles article:last-child {
+    border-bottom: 0;
+  }
+
+  .principles h2 {
+    margin-top: 28px;
+  }
+
+  .flow div {
+    grid-template-columns: 36px 1fr;
+  }
+
+  .flow small {
+    display: none;
+  }
+}
+

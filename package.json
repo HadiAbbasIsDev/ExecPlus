@@ -1,0 +1,17 @@
+{
+  "_file_note": "Use case: Defines JavaScript workspace commands. What it does: Coordinates the ExecPlus web application from the repository root.",
+  "name": "execplus-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @execplus/web",
+    "build:web": "npm run build --workspace @execplus/web",
+    "lint:web": "npm run lint --workspace @execplus/web",
+    "typecheck:web": "npm run typecheck --workspace @execplus/web",
+    "test:web": "npm run test --workspace @execplus/web"
+  }
+}
+

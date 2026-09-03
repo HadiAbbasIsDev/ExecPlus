@@ -1,0 +1,36 @@
+# Use case: Prevents local, generated, secret, and customer-data artifacts from entering version control.
+# What it does: Defines repository-wide ignore patterns for Python, Node.js, IDE, data, model, and infrastructure outputs.
+
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.idea/
+.vscode/
+data/
+uploads/
+exports/
+models/
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.db
+.minio/
+.postgres/
+
