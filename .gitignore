@@ -26,11 +26,10 @@ coverage/
 data/
 uploads/
 exports/
-models/
+/models/
 *.duckdb
 *.duckdb.wal
 *.sqlite
 *.db
 .minio/
 .postgres/
-
